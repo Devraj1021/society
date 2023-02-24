@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {{member.username}}
+    <br>
+    {{member.first_name}} {{member.last_name}}
+    <br>
+    {{member.email}}
+    <br>
+    {{member.phone}}
+    <br>
+    {{member.status}}
+    <br>
+    {{member.commitee_member}}
+    <br>
+    <button type="submit"><a href="{% url 'a_update' member.username %}">Update</a></button>
+{% endblock %}

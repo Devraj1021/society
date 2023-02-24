@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Society Care</title>
+</head>
+<body>
+    <header>
+        <a href="{% url 'member' request.user.username %}">Profile</a>
+        <a href="{% url 'member_complaints' request.user.username %}">Comp</a>
+        <a href="{% url 'm_maintenance' request.user.username %}">Maintenance</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </header>
+    {% block content %}
+
+    {% endblock %}
+
+    <footer></footer>
+</body>
+</html>
