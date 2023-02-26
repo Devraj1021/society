@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1 id="complant">Maintenance for {{ member.username }}</h1>
+    <ul>
+        {% for maintenance in maintenances %}
+            <li>{{ maintenance.title }}</li>
+            {% if maintenance.pay_date == null %}
+            <h6>Unpaid</h6>
+            {% else %}
+            <h6>Paid</h6>
+            {% endif %}
+        {% endfor %}
+    </ul>
+
+    <button type="submit"class ="custom-btn btn-3" id="cbtn"><a href="#">Pay Now</a></button>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% for complaint in complaints %}
+{{complaint.member}}
+{{complaint.title}}
+{{complaint.description}}
+{{complaint.created_date}}
+{{complaint.status}}
+<hr>
+{% endfor %}
+
+{% endblock %}
