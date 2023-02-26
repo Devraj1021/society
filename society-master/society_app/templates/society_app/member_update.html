@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="card-container">
+        <h1 id="complant">Member Update Form</h1>
+        
+        {{form.as_p}}
+        <button type="submit"class ="custom-btn btn-3" id="cbtn1">Update</button>
+        </div>
+    </form>
+    {{msg}}
+{% endblock %}

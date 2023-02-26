@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1 id="complant">Complaints for {{ member.username }}</h1>
+    <ul>
+        {% for complaint in complaints %}
+            <li>{{ complaint.title }} - {{ complaint.description }}</li>
+            <a href="{% url 'delete_complaint' complaint.id %}">Delete</a>
+        {% endfor %}
+    </ul>
+
+    <button type="submit" class ="custom-btn btn-3" id="cbtn"><a href="{% url 'file_complaint' %}">File Complaint</a></button>
+{% endblock %}
