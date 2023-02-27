@@ -3,9 +3,12 @@
 {% block content %}
     <form action="" method="POST">
         {% csrf_token %}
-        <h1>Member Update Form</h1>
+        <div class="card-container">
+        <h1 id="complant">Member Update Form</h1>
+        
         {{form.as_p}}
-        <button type="submit">Update</button>
+        <button type="submit"class ="custom-btn btn-3" id="cbtn1">Update</button>
+        </div>
     </form>
     {{msg}}
 {% endblock %}

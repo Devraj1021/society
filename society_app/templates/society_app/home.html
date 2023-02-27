@@ -1,14 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
     <title>Document</title>
 </head>
 <body>
-    <a href="{% url 'member_register' %}">Register</a>
-    <hr>
-    <a href="{% url 'h_login' %}">Login</a>
+    <button type="submit" class ="custom-btn btn-3" id="btn"><span><a href="{% url 'member_register' %}">Register</a></span></button>
+    <button type="submit" class ="custom-btn btn-3" id="btn1"><span><a href="{% url 'h_login' %}">Login</a></span></button>
+   
 </body>
 </html>

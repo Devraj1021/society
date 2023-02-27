@@ -3,9 +3,11 @@
 {% block content %}
     <form action="" method="POST">
         {% csrf_token %}
-
+        <div class="card-container">
         {{ form.as_p }}
+        <button type="submit"class ="custom-btn btn-3" id="cbtn1">Submit</button>
+        </div>
 
-        <button type="submit">Submit</button>
+        
     </form>
 {% endblock %}
