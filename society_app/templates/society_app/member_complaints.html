@@ -1,7 +1,7 @@
 {% extends 'main.html' %}
 
 {% block content %}
-    <h1>Complaints for {{ member.username }}</h1>
+    <h1 id="complant">Complaints for {{ member.username }}</h1>
     <ul>
         {% for complaint in complaints %}
             <li>{{ complaint.title }} - {{ complaint.description }}</li>
@@ -9,5 +9,5 @@
         {% endfor %}
     </ul>
 
-    <button type="submit"><a href="{% url 'file_complaint' %}">File Complaint</a></button>
+    <button type="submit" class ="custom-btn btn-3" id="cbtn"><a href="{% url 'file_complaint' %}">File Complaint</a></button>
 {% endblock %}
